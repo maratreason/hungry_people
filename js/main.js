@@ -38,10 +38,14 @@ function actionHandler(element, eventName ,action) {
 
 function toggleSelect() {
 	this.parentElement.classList.toggle("active");
+	const selectIcon = this.querySelector(".select__image");
+	selectIcon.classList.toggle("showed");
 }
 
 function chooseSelect() {
 	const select = this.closest(".section__select");
+	const selectIcon = select.querySelector(".select__image");
 	select.querySelector(".select__current").innerText = this.innerText;
 	select.classList.remove("active");
+	selectIcon.classList.remove("showed");
 }
