@@ -1,0 +1,17 @@
+.section-gallery {
+	width: 100%;
+}
+.gallery__images {
+	display: flex;
+}
+.gallery__image {
+	max-width: 100%;
+	display: block;
+	flex-grow: 1;
+	transition: opacity 0.2s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}

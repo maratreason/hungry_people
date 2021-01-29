@@ -1,0 +1,149 @@
+/* Buttons */
+.button {
+    background: #E8C300;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 40px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	min-width: 160px;
+	transition: border-color 0.2s ease-in, background-color 0.2s ease-in, color 0.2s ease-in;
+
+	&:hover {
+		background: #caa900;
+		border-color: #caa900;
+	}
+}
+
+.outlined {
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    background: transparent;
+	color: #fff;
+}
+
+.button-fullwidth {
+	width: 100%;
+}
+/* /Buttons */
+
+/* Inputs */
+.section__input {
+	display: flex;
+	flex-grow: 1;
+	width: 277px;
+	padding: 20px;
+	background: #E5E5E5;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	font-size: 14px;
+	color: #333;
+}
+.section__input + .section__input {
+	margin-left: 10px;
+}
+.section__textarea {
+	width: 100%;
+	height: 200px;
+	padding: 20px;
+	background: #E5E5E5;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	font-size: 14px;
+	color: #333;
+}
+/* /Inputs */
+
+/* Modals */
+.backdrop {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 10;
+
+	&.active {
+		display: block;
+	}
+}
+
+@keyframes opacity {
+	0%	{ opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.modal {
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, 0.95);
+	padding: 50px;
+	border-radius: 5px;
+	box-shadow: 0 0 120px rgb(218, 218, 218);
+	opacity: 1;
+	z-index: 11;
+
+	.modal__close {
+		content: "";
+		position: absolute;
+		right: 40px;
+		top: 40px;
+		color: rgba(0, 0, 0, 0.9);
+		font-weight: bold;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	&.active {
+		display: flex;
+		animation: opacity 0.5s ease;
+	}
+
+	.modal__image {
+		margin-right: 30px;
+		img {
+			border-radius: 5px;
+		}
+	}
+
+	.modal__text {
+
+	}
+
+	.modal__title {
+		font-family: "Banny";
+		font-size: 36px;
+		position: relative;
+		margin-bottom: 40px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 60px;
+			left: 0;
+			width: 60px;
+			height: 5px;
+			background: #E8C300;
+			border-radius: 3px;
+		}
+	}
+
+	.modal__subtitle {
+		color: #333;
+	}
+}
+/* /Modals */

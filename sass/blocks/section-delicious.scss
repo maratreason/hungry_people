@@ -1,0 +1,96 @@
+.section-delicious {
+	padding: 100px 0;
+	text-align: center;
+
+	.section__text {
+		margin: 0 auto;
+	}
+}
+
+.delicious-wrapper {
+	margin: 50px 0;
+}
+
+.delicious-menu {
+	margin-bottom: 50px;
+}
+
+.delicious-menu__items {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.delicious-menu__item {
+	padding: 15px 50px;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: color 0.2s ease-in;
+
+	&:not(:last-child) {
+		border-right: 1px solid rgba(51, 51, 51, 0.2);
+	}
+
+	&:hover,
+	&.active {
+		color: #E8C300;
+	}
+}
+
+.delicious-content__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.delicious-content__item {
+	max-width: 360px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 25px 30px;
+	cursor: pointer;
+
+	& > * {
+		& > * {
+			transition: color 0.2s ease-in;
+		}
+		transition: color 0.2s ease-in;
+	}
+
+	&:last-child {
+		align-content: flex-start;
+	}
+
+	&:hover {
+		.delicious__title,
+		.delicious__description,
+		.delicious__price {
+			color: #E8C300;
+		}
+	}
+}
+
+.delicious__text {
+	text-align: left;
+}
+
+.delicious__title {
+	font-family: "Banny";
+	font-size: 18px;
+	color: #333;
+}
+
+.delicious__description {
+	font-size: 12px;
+	color: #b8b8b8;
+}
+
+.delicious__price {
+	font-family: "Banny";
+	font-size: 18px;
+	color: #333;
+}

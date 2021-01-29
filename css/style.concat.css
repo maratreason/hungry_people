@@ -1,0 +1,32 @@
+body {
+  background: green;
+  font-size: 20px; }
+
+p {
+  filter: blur(10px); 
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transform: scale(0.5);
+}
+
+.page {
+  display: grid;
+  grid-gap: 33px;
+  grid-template:
+    "head head  head" 1fr
+    "nav  main  main" minmax(100px, 1fr)
+    "nav  foot  foot" 2fr /
+    1fr   100px 1fr;
+}
+.page__head {
+  grid-area: head;
+}
+.page__nav {
+  grid-area: nav;
+}
+.page__main {
+  grid-area: main;
+}
+.page__footer {
+  grid-area: foot;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNvbmNhdC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIsZUFBZSxFQUFFOztBQUVuQjtFQUNFLGtCQUFrQjtFQUNsQiwwQ0FBMEM7QUFDNUMiLCJmaWxlIjoic3R5bGUuY29uY2F0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBiYWNrZ3JvdW5kOiBncmVlbjtcbiAgZm9udC1zaXplOiAyMHB4OyB9XG5cbnAge1xuICBmaWx0ZXI6IGJsdXIoMTBweCk7IFxuICBib3gtc2hhZG93OiAxcHggMXB4IDFweCByZ2JhKDAsIDAsIDAsIDAuNSk7XG59XG4iXX0= */

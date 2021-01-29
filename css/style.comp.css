@@ -1,0 +1,6 @@
+body {
+  background: green;
+  font-size: 20px; }
+
+p {
+  filter: blur(10px); }
