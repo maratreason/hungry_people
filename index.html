@@ -11,7 +11,7 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<nav class="nav">
+		<nav class="nav hidden">
 			<div class="container">
 				<div class="nav__row">
 					<ul class="nav__list">
@@ -51,7 +51,7 @@
 			</div>
 		</nav>
 
-		<header class="header">
+		<header class="header hidden">
 			<div class="container">
 				<div class="header__row">
 					<div class="header__content">
@@ -106,7 +106,7 @@
 			</div>
 		</header>
 
-		<section class="section-about" id="about">
+		<section class="section-about hidden" id="about">
 			<div class="container">
 				<div class="section__text mr-auto">
 					<div class="section__title">About Us</div>
@@ -133,7 +133,7 @@
 			</div>
 		</section>
 
-		<section class="section-ourteam" id="team">
+		<section class="section-ourteam hidden" id="team">
 			<div class="container">
 				<p class="top-text">Our team</p>
 				<div class="section__image-wrapper show-modal">
@@ -188,11 +188,26 @@
 								class="section__input"
 								placeholder="Phone"
 							/>
-							<input
+
+							<div
 								type="text"
-								class="section__input"
+								class="section__select"
 								placeholder="People"
-							/>
+							>
+								<div class="select__header">
+									<div class="select__current">People</div>
+									<div class="select__icon">
+										<img class="select__image" src="/img/icons/shevron.svg" alt="">
+									</div>
+								</div>
+								<div class="select__body">
+									<div class="select__item">People</div>
+									<div class="select__item">Value 2</div>
+									<div class="select__item">Value 3</div>
+									<div class="select__item">Value 4</div>
+									<div class="select__item">Value 5</div>
+								</div>
+							</div>
 						</div>
 						<div class="section__input-row">
 							<input
@@ -200,11 +215,25 @@
 								class="section__input"
 								placeholder="Date (mm/dd)"
 							/>
-							<input
+							<div
 								type="text"
-								class="section__input"
+								class="section__select"
 								placeholder="Time"
-							/>
+							>
+								<div class="select__header">
+									<div class="select__current">Time</div>
+									<div class="select__icon">
+										<img class="select__image" src="/img/icons/shevron.svg" alt="">
+									</div>
+								</div>
+								<div class="select__body">
+									<div class="select__item">Time</div>
+									<div class="select__item">Value 2</div>
+									<div class="select__item">Value 3</div>
+									<div class="select__item">Value 4</div>
+									<div class="select__item">Value 5</div>
+								</div>
+							</div>
 						</div>
 						<div class="section__input-row">
 							<button class="button button-fullwidth">
@@ -223,7 +252,7 @@
 			</div>
 		</section>
 
-		<section class="section-specialties" id="about">
+		<section class="section-specialties hidden" id="about">
 			<div class="container">
 				<p class="top-text">Specialties</p>
 				<div class="section__image-wrapper show-modal">
@@ -251,7 +280,7 @@
 			</div>
 		</section>
 
-		<section class="section-delicious" id="menu">
+		<section class="section-delicious hidden" id="menu">
 			<div class="container">
 				<div class="section__text">
 					<div class="section__title">DELICIOUS MENU</div>
@@ -474,7 +503,7 @@
 			</div>
 		</section>
 
-		<section class="section-events" id="events">
+		<section class="section-events hidden" id="events">
 			<div class="container justify-space-around">
 				<p class="top-text">Private Events</p>
 				<div class="section__image-wrapper show-modal">
@@ -500,7 +529,7 @@
 			</div>
 		</section>
 
-		<section class="section-gallery" id="gallery">
+		<section class="section-gallery hidden" id="gallery">
 			<div class="gallery__images">
 				<img
 					class="gallery__image show-modal"
@@ -525,7 +554,7 @@
 			</div>
 		</section>
 
-		<section class="section-contact" id="contact">
+		<section class="section-contact hidden" id="contact">
 			<div class="container">
 				<div class="section__text">
 					<div class="section__title">Contact</div>
