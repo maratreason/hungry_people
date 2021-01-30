@@ -3,12 +3,16 @@
 	text-align: center;
 
 	.section__text {
-		margin: 0 auto;
+		margin: 0 auto !important;
 	}
 }
 
 .section__input-row {
 	justify-content: space-between;
+	@media (max-width: 1100px) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 .section-contact__items {
@@ -16,6 +20,14 @@
 	justify-content: space-between;
 	font-size: 12px;
 	color: #bdbdbd;
+	@media (max-width: 1100px) {
+		margin: 30px 0 0;
+		order: 1;
+	}
+	@media (max-width: 920px) {
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 .section-contact__item {
@@ -23,6 +35,12 @@
 	align-items: center;
 	text-align: left;
 	width: 250px;
+	@media (max-width: 920px) {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
 }
 
 .section-contact__icon {
@@ -32,5 +50,11 @@
 
 	&.reverse {
 		transform: rotateY(180deg);
+	}
+}
+
+@media (max-width: 800px) {
+	.button-fullwidth {
+		margin-top: 10px;
 	}
 }

@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/aos.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/css/style.css" rel="stylesheet" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
 			rel="stylesheet"
@@ -51,24 +52,75 @@
 			</div>
 		</nav>
 
+		<div class="menu-icon-wrapper">
+			<div class="menu-icon"></div>
+		</div>
+		<div class="menu-adaptive">
+			<ul class="menu__items">
+				<li class="menu__item">
+					<a class="menu__link" href="#">Home</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#about">About</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#team">Team</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#booking">Booking</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">Menu</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#gallery">Gallery</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#events">Events</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+
 		<header class="header">
 			<div class="container">
 				<div class="header__row">
 					<div class="header__content">
-						<div class="header__content-left">
+						<div
+							class="header__content-left"
+							data-aos="fade-right"
+							data-aos-duration="1500"
+							data-aos-delay="500"
+						>
 							<div class="header__text-left">
 								Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
 							</div>
 						</div>
-						<div class="header__content-main">
+						<div
+							class="header__content-main"
+							data-aos="fade-up"
+							data-aos-duration="1700"
+						>
 							<div class="header__subtitle">Restaurant</div>
 							<h1 class="header__title">Hungry People</h1>
-							<div class="header__buttons">
+							<div
+								class="header__buttons"
+								data-aos="zoom-in"
+								data-aos-duration="1500"
+								data-aos-delay="1700"
+							>
 								<button class="button">Book table</button>
 								<button class="button outlined">Explore</button>
 							</div>
 						</div>
-						<div class="header__social">
+						<div
+							class="header__social"
+							data-aos="fade-left"
+							data-aos-duration="1500"
+							data-aos-delay="500"
+						>
 							<ul class="social__items">
 								<li class="social__item">
 									<a href="#" class="social__link">
@@ -98,7 +150,7 @@
 						</div>
 					</div>
 					<div class="header__shevron">
-						<a href="#" class="shevron">
+						<a href="#about" class="shevron">
 							<img src="/img/icons/shevron.svg" alt="shevron" />
 						</a>
 					</div>
@@ -108,7 +160,12 @@
 
 		<section class="section-about" id="about">
 			<div class="container">
-				<div class="section__text mr-auto">
+				<div
+					class="section__text mr-auto"
+					data-aos="zoom-in"
+					data-aos-duration="1000"
+					data-aos-delay="1000"
+				>
 					<div class="section__title">About Us</div>
 					<div class="section__subtitle">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -123,7 +180,12 @@
 						laoreet.
 					</div>
 				</div>
-				<div class="section__image-wrapper show-modal">
+				<div
+					class="section__image-wrapper show-modal"
+					data-aos="fade-left"
+					data-aos-duration="1000"
+					data-aos-delay="1100"
+				>
 					<img
 						class="section__image"
 						src="/img/about/about-img.jpg"
@@ -136,14 +198,24 @@
 		<section class="section-ourteam" id="team">
 			<div class="container">
 				<p class="top-text">Our team</p>
-				<div class="section__image-wrapper show-modal">
+				<div
+					class="section__image-wrapper show-modal"
+					data-aos="fade-right"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-sine"
+				>
 					<img
 						class="section__image"
 						src="/img/our-team/Rectangle.jpg"
 						alt=""
 					/>
 				</div>
-				<div class="section__text ml-auto">
+				<div
+					class="section__text ml-auto"
+					data-aos="zoom-in"
+					data-aos-duration="1000"
+					data-aos-delay="1000"
+				>
 					<div class="section__title">MASTER CHEF</div>
 					<div class="section__subtitle">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -167,7 +239,11 @@
 					Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM, Phone: +40 729
 					131 637/+40 726 458 782
 				</p>
-				<div class="section__text mr-auto">
+				<div
+					class="section__text mr-auto"
+					data-aos="zoom-in"
+					data-aos-duration="1000"
+				>
 					<div class="section__title">Book a table</div>
 					<div class="section__input-block">
 						<div class="section__input-row">
@@ -188,11 +264,30 @@
 								class="section__input"
 								placeholder="Phone"
 							/>
-							<input
+
+							<div
 								type="text"
-								class="section__input"
+								class="section__select"
 								placeholder="People"
-							/>
+							>
+								<div class="select__header">
+									<div class="select__current">People</div>
+									<div class="select__icon">
+										<img
+											class="select__image"
+											src="/img/icons/shevron.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="select__body">
+									<div class="select__item">People</div>
+									<div class="select__item">Value 2</div>
+									<div class="select__item">Value 3</div>
+									<div class="select__item">Value 4</div>
+									<div class="select__item">Value 5</div>
+								</div>
+							</div>
 						</div>
 						<div class="section__input-row">
 							<input
@@ -200,11 +295,29 @@
 								class="section__input"
 								placeholder="Date (mm/dd)"
 							/>
-							<input
+							<div
 								type="text"
-								class="section__input"
+								class="section__select"
 								placeholder="Time"
-							/>
+							>
+								<div class="select__header">
+									<div class="select__current">Time</div>
+									<div class="select__icon">
+										<img
+											class="select__image"
+											src="/img/icons/shevron.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="select__body">
+									<div class="select__item">Time</div>
+									<div class="select__item">Value 2</div>
+									<div class="select__item">Value 3</div>
+									<div class="select__item">Value 4</div>
+									<div class="select__item">Value 5</div>
+								</div>
+							</div>
 						</div>
 						<div class="section__input-row">
 							<button class="button button-fullwidth">
@@ -213,7 +326,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="section__image-wrapper show-modal">
+				<div
+					class="section__image-wrapper show-modal"
+					data-aos="fade-left"
+					data-aos-duration="1000"
+				>
 					<img
 						class="section__image"
 						src="/img/book/about-img.jpg"
@@ -223,17 +340,25 @@
 			</div>
 		</section>
 
-		<section class="section-specialties" id="about">
+		<section class="section-specialties">
 			<div class="container">
 				<p class="top-text">Specialties</p>
-				<div class="section__image-wrapper show-modal">
+				<div
+					class="section__image-wrapper show-modal"
+					data-aos="fade-right"
+					data-aos-duration="1000"
+				>
 					<img
 						class="section__image"
 						src="/img/specialties/Rectangle.jpg"
 						alt=""
 					/>
 				</div>
-				<div class="section__text ml-auto">
+				<div
+					class="section__text ml-auto"
+					data-aos="zoom-in"
+					data-aos-duration="1000"
+				>
 					<div class="section__title">chocolate pancakes</div>
 					<div class="section__subtitle">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -253,7 +378,12 @@
 
 		<section class="section-delicious" id="menu">
 			<div class="container">
-				<div class="section__text">
+				<div
+					class="section__text"
+					data-aos="zoom-in"
+					data-aos-duration="1000"
+					data-aos-delay="2000"
+				>
 					<div class="section__title">DELICIOUS MENU</div>
 					<div class="section__subtitle">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -261,7 +391,12 @@
 					</div>
 				</div>
 
-				<div class="delicious-wrapper">
+				<div
+					class="delicious-wrapper"
+					data-aos="zoom-in"
+					data-aos-duration="1500"
+					data-aos-delay="2100"
+				>
 					<div class="delicious-menu">
 						<ul class="delicious-menu__items">
 							<li class="delicious-menu__item active">Soupe</li>
@@ -276,7 +411,11 @@
 
 					<div class="delicious-content">
 						<div class="delicious-content__items">
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -288,7 +427,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -300,7 +443,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -312,7 +459,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -324,7 +475,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -336,7 +491,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -348,7 +507,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -360,7 +523,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -372,7 +539,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -384,7 +555,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -396,7 +571,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -408,7 +587,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -420,7 +603,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -432,7 +619,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -444,7 +635,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -456,7 +651,11 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
-							<div class="delicious-content__item">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
 								<div class="delicious__text">
 									<div class="delicious__title">
 										PIZZA QUATRO STAGIONI . . . .
@@ -475,9 +674,15 @@
 		</section>
 
 		<section class="section-events" id="events">
-			<div class="container justify-space-around">
+			<div class="container">
 				<p class="top-text">Private Events</p>
-				<div class="section__image-wrapper show-modal">
+				<div
+					class="section__image-wrapper show-modal"
+					data-aos="fade-right"
+					data-aos-duration="1000"
+					data-aos-delay="1100"
+					data-aos-easing="ease-in-sine"
+				>
 					<img
 						class="section__image"
 						src="/img/events/Rectangle_1.jpg"
@@ -485,7 +690,13 @@
 					/>
 					<div class="section__image-text">Weddings</div>
 				</div>
-				<div class="section__image-wrapper-right show-modal">
+				<div
+					class="section__image-wrapper-right show-modal"
+					data-aos="fade-left"
+					data-aos-duration="1000"
+					data-aos-delay="1100"
+					data-aos-easing="ease-in-sine"
+				>
 					<img
 						class="section__image"
 						src="/img/events/Rectangle_2.jpg"
@@ -527,7 +738,12 @@
 
 		<section class="section-contact" id="contact">
 			<div class="container">
-				<div class="section__text">
+				<div
+					class="section__text"
+					data-aos="fade-in"
+					data-aos-duration="1000"
+					data-aos-delay="1000"
+				>
 					<div class="section__title">Contact</div>
 					<div class="section__subtitle">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -535,7 +751,12 @@
 					</div>
 				</div>
 
-				<div class="section__input-block">
+				<div
+					class="section__input-block"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+					data-aos-delay="1100"
+				>
 					<div class="section__input-row">
 						<input
 							type="text"
@@ -562,15 +783,27 @@
 					<div class="section__input-row">
 						<div class="section-contact__items">
 							<div class="section-contact__item">
-								<img class="section-contact__icon" src="/img/icons/location.svg" alt="">
+								<img
+									class="section-contact__icon"
+									src="/img/icons/location.svg"
+									alt=""
+								/>
 								5th London Boulevard, U.K..
 							</div>
 							<div class="section-contact__item">
-								<img class="section-contact__icon reverse" src="/img/icons/phone-call.svg" alt="">
+								<img
+									class="section-contact__icon reverse"
+									src="/img/icons/phone-call.svg"
+									alt=""
+								/>
 								+40 729 131 637/+40 726 458 782
 							</div>
 							<div class="section-contact__item">
-								<img class="section-contact__icon" src="/img/icons/envelope.svg" alt="">
+								<img
+									class="section-contact__icon"
+									src="/img/icons/envelope.svg"
+									alt=""
+								/>
 								office@mindblister.com
 							</div>
 						</div>
@@ -583,9 +816,19 @@
 		</section>
 
 		<footer class="footer">
-			<iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d17943.79856024161!2d49.177237160327095!3d55.79367513480851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x415eb280b37895cd%3A0x13ab7bb2bfe047e2!2z0YPQuy4g0JrQvtGB0LzQvtC90LDQstGC0L7QsiwgMTksINCa0LDQt9Cw0L3RjCwg0KDQtdGB0L8uINCi0LDRgtCw0YDRgdGC0LDQvSwgNDIwMDYx!3m2!1d55.8009132!2d49.1898364!5e0!3m2!1sru!2sru!4v1611915180687!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<iframe
+				class="footer__map"
+				src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d17943.79856024161!2d49.177237160327095!3d55.79367513480851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x415eb280b37895cd%3A0x13ab7bb2bfe047e2!2z0YPQuy4g0JrQvtGB0LzQvtC90LDQstGC0L7QsiwgMTksINCa0LDQt9Cw0L3RjCwg0KDQtdGB0L8uINCi0LDRgtCw0YDRgdGC0LDQvSwgNDIwMDYx!3m2!1d55.8009132!2d49.1898364!5e0!3m2!1sru!2sru!4v1611915180687!5m2!1sru!2sru"
+				frameborder="0"
+				style="border: 0"
+				allowfullscreen=""
+				aria-hidden="false"
+				tabindex="0"
+			></iframe>
 			<div class="footer__bottom">
-				<div class="footer__copyright">© Copyright Mindblister  2019</div>
+				<div class="footer__copyright">
+					© Copyright Mindblister 2019
+				</div>
 			</div>
 		</footer>
 
@@ -593,7 +836,7 @@
 		<div class="modal">
 			<div class="modal__close">✕</div>
 			<div class="modal__image">
-				<img src="/img/about/about-img.jpg" alt="about img">
+				<img src="/img/about/about-img.jpg" alt="about img" />
 			</div>
 			<div class="modal__text">
 				<h1 class="modal__title">MASTER CHEF</h1>
@@ -604,6 +847,7 @@
 			</div>
 		</div>
 
+		<script src="/js/aos.min.js"></script>
 		<script src="/js/main.js"></script>
 	</body>
 </html>

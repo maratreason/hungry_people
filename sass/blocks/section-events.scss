@@ -4,25 +4,41 @@
 	background-attachment: fixed;
 	position: relative;
 
+	& .container {
+		justify-content: space-around;
+		@media (max-width: 1530px) {
+			justify-content: center;
+		}
+	}
+
 	.section__image-wrapper {
 		border-radius: 5px;
 		transition: transform 0.2s ease-in;
+		@media (max-width: 1530px) {
+			max-width: 300px;
+			margin: 0 25px !important;
+		}
 		&:after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
 			transition: left 0.2s ease-in;
-			left: -120px;
-			width: 250px;
-			height: 250px;
-			border: 20px solid #e8c300;
-			z-index: 2;
+			@include leftRectangle(-120px);
+			@media (max-width: 1530px) {
+				@include leftRectangle(-70px);
+			}
 		}
 		&:hover {
 			transform: scale(1.03);
 			&:after {
 				left: -140px;
+				@media (max-width: 1530px) {
+					left: -100px;
+				}
+			}
+		}
+
+		.section__image {
+			@media (max-width: 716px) {
+				margin-top: 0;
+				margin-bottom: 30px;
 			}
 		}
 
@@ -43,6 +59,9 @@
 			color: #fff;
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
+			@media (max-width: 716px) {
+				display: none;
+			}
 		}
 	}
 
@@ -52,6 +71,11 @@
 		border-radius: 5px;
 		transition: transform 0.2s ease-in;
 
+		@media (max-width: 1530px) {
+			max-width: 300px;
+			margin: 0 25px !important;
+		}
+
 		.section__image {
 			max-width: 100%;
 			height: auto;
@@ -60,22 +84,22 @@
 			box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 		}
 		&:after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
 			transition: right 0.2s ease-in;
-			right: -120px;
-			width: 250px;
-			height: 250px;
-			border: 20px solid #e8c300;
-			border-radius: 5px;
-			z-index: 2;
+			@include rightRectangle(-120px);
+			@media (max-width: 1530px) {
+				@include rightRectangle(-70px);
+			}
+			@media (max-width: 916px) {
+				display: none;
+			}
 		}
 		&:hover {
 			transform: scale(1.03);
 			&:after {
 				right: -140px;
+				@media (max-width: 1530px) {
+					right: -100px;
+				}
 			}
 		}
 		.section__image-text {
@@ -95,6 +119,9 @@
 			color: #fff;
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
+			@media (max-width: 716px) {
+				display: none;
+			}
 		}
 	}
 

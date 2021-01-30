@@ -1,22 +1,23 @@
 /* Buttons */
 .button {
-    background: #E8C300;
+    background: $main-color;
     border-radius: 5px;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #fff;
     padding: 20px 40px;
 	cursor: pointer;
 	border: 1px solid transparent;
 	min-width: 160px;
 	transition: border-color 0.2s ease-in, background-color 0.2s ease-in, color 0.2s ease-in;
+	outline: none;
 
 	&:hover {
-		background: #caa900;
-		border-color: #caa900;
+		background: $main-color-hover;
+		border-color: $main-color-hover;
 	}
 }
 
@@ -32,7 +33,7 @@
 }
 /* /Buttons */
 
-/* Inputs */
+/* Input, Select, Textarea */
 .section__input {
 	display: flex;
 	flex-grow: 1;
@@ -44,10 +45,104 @@
 	outline: none;
 	font-size: 14px;
 	color: #333;
+
+	@media (max-width: 1530px) {
+		width: 240px;
+	}
+	@media (max-width: 800px) {
+		width: 100%;
+		margin-bottom: 10px;
+	}
 }
-.section__input + .section__input {
+
+.section__input + .section__input,
+.section__input + .section__select {
 	margin-left: 10px;
+	@media (max-width: 800px) {
+		margin-left: 0;
+	}
 }
+
+.section__select {
+	position: relative;
+	@media (max-width: 800px) {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	&.active {
+		.select__body {
+			display: block;
+			animation: opacity 0.5s ease;
+			opacity: 1;
+		}
+	}
+	.select__header {
+		display: flex;
+		flex-grow: 1;
+		width: 277px;
+		padding: 20px;
+		background: #E5E5E5;
+		border: none;
+		border-radius: 5px;
+		outline: none;
+		font-size: 14px;
+		color: #333;
+		cursor: pointer;
+		@media (max-width: 1530px) {
+			width: 240px;
+		}
+		@media (max-width: 800px) {
+			width: 100%;
+		}
+	}
+
+	.select__current {
+		color: #333;
+		opacity: 0.8;
+	}
+
+	.select__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		margin-left: auto;
+		text-align: center;
+
+		.select__image {
+			opacity: 0.5;
+			transition: transform 0.2s ease-in;
+			&.showed {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.select__body {
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 110%;
+		background: #fff;
+		border: 1px solid #E5E5E5;
+		border-radius: 5px;
+		opacity: 0;
+		z-index: 1;
+	}
+	.select__item {
+		font-size: 14px;
+		padding: 20px;
+		cursor: pointer;
+		&:hover {
+			background:#f1f1f1;
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid #E5E5E5;
+		}
+	}
+}
+
 .section__textarea {
 	width: 100%;
 	height: 200px;
@@ -59,7 +154,7 @@
 	font-size: 14px;
 	color: #333;
 }
-/* /Inputs */
+/* /Input, Select, Textarea */
 
 /* Modals */
 .backdrop {
@@ -96,6 +191,10 @@
 	box-shadow: 0 0 120px rgb(218, 218, 218);
 	opacity: 1;
 	z-index: 11;
+	@media (max-width: 1070px) {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 
 	.modal__close {
 		content: "";
@@ -106,6 +205,11 @@
 		font-weight: bold;
 		font-size: 20px;
 		cursor: pointer;
+
+		@media (max-width: 1070px) {
+			right: 20px;
+			top: 20px;
+		}
 	}
 
 	&.active {
@@ -115,6 +219,9 @@
 
 	.modal__image {
 		margin-right: 30px;
+		@media (max-width: 1070px) {
+			margin-right: 0;
+		}
 		img {
 			border-radius: 5px;
 		}
@@ -130,6 +237,12 @@
 		position: relative;
 		margin-bottom: 40px;
 
+		@media (max-width: 1070px) {
+			&:after {
+				display: none;
+			}
+		}
+
 		&:after {
 			content: "";
 			position: absolute;
@@ -137,7 +250,7 @@
 			left: 0;
 			width: 60px;
 			height: 5px;
-			background: #E8C300;
+			background: $main-color;
 			border-radius: 3px;
 		}
 	}

@@ -1,9 +1,13 @@
 @import "fonts.scss";
-@import "base.scss";
+@import "variables.scss";
+@import "mixins";
 @import "components.scss";
+
+@import "base.scss";
 @import "header.scss";
 
 @import "blocks/navigation.scss";
+@import "blocks/menu-icon.scss";
 @import "blocks/header.scss";
 @import "blocks/section-about.scss";
 @import "blocks/section-ourteam.scss";
