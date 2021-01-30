@@ -839,8 +839,9 @@ a.nav__logo {
   position: relative; }
   .section-booking .container {
     flex-wrap: wrap; }
-  .section-booking .section__image-wrapper {
-    display: none; }
+  @media (max-width: 1200px) {
+    .section-booking .section__image-wrapper {
+      display: none; } }
 
 .section-specialties {
   background-image: url(../../img/specialties/specialties-bg.jpg);
