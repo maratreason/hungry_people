@@ -1,22 +1,23 @@
 /* Buttons */
 .button {
-    background: #E8C300;
+    background: $main-color;
     border-radius: 5px;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #fff;
     padding: 20px 40px;
 	cursor: pointer;
 	border: 1px solid transparent;
 	min-width: 160px;
 	transition: border-color 0.2s ease-in, background-color 0.2s ease-in, color 0.2s ease-in;
+	outline: none;
 
 	&:hover {
-		background: #caa900;
-		border-color: #caa900;
+		background: $main-color-hover;
+		border-color: $main-color-hover;
 	}
 }
 
@@ -44,15 +45,30 @@
 	outline: none;
 	font-size: 14px;
 	color: #333;
+
+	@media (max-width: 1530px) {
+		width: 240px;
+	}
+	@media (max-width: 800px) {
+		width: 100%;
+		margin-bottom: 10px;
+	}
 }
 
 .section__input + .section__input,
 .section__input + .section__select {
 	margin-left: 10px;
+	@media (max-width: 800px) {
+		margin-left: 0;
+	}
 }
 
 .section__select {
 	position: relative;
+	@media (max-width: 800px) {
+		width: 100%;
+		margin-bottom: 10px;
+	}
 	&.active {
 		.select__body {
 			display: block;
@@ -72,6 +88,12 @@
 		font-size: 14px;
 		color: #333;
 		cursor: pointer;
+		@media (max-width: 1530px) {
+			width: 240px;
+		}
+		@media (max-width: 800px) {
+			width: 100%;
+		}
 	}
 
 	.select__current {
@@ -89,7 +111,7 @@
 
 		.select__image {
 			opacity: 0.5;
-
+			transition: transform 0.2s ease-in;
 			&.showed {
 				transform: rotate(90deg);
 			}
@@ -169,6 +191,10 @@
 	box-shadow: 0 0 120px rgb(218, 218, 218);
 	opacity: 1;
 	z-index: 11;
+	@media (max-width: 1070px) {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 
 	.modal__close {
 		content: "";
@@ -179,6 +205,11 @@
 		font-weight: bold;
 		font-size: 20px;
 		cursor: pointer;
+
+		@media (max-width: 1070px) {
+			right: 20px;
+			top: 20px;
+		}
 	}
 
 	&.active {
@@ -188,6 +219,9 @@
 
 	.modal__image {
 		margin-right: 30px;
+		@media (max-width: 1070px) {
+			margin-right: 0;
+		}
 		img {
 			border-radius: 5px;
 		}
@@ -203,6 +237,12 @@
 		position: relative;
 		margin-bottom: 40px;
 
+		@media (max-width: 1070px) {
+			&:after {
+				display: none;
+			}
+		}
+
 		&:after {
 			content: "";
 			position: absolute;
@@ -210,7 +250,7 @@
 			left: 0;
 			width: 60px;
 			height: 5px;
-			background: #E8C300;
+			background: $main-color;
 			border-radius: 3px;
 		}
 	}

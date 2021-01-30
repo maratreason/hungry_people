@@ -1,0 +1,47 @@
+@mixin title-underline {
+	content: "";
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 5px;
+	background: $main-color;
+	border-radius: 3px;
+}
+
+@mixin rightRectangle($sideOffset) {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: $sideOffset;
+	width: 250px;
+	height: 250px;
+	border: 20px solid $main-color;
+	border-radius: 5px;
+	z-index: 2;
+	@media (max-width: 1530px) {
+		width: 150px;
+		height: 150px;
+		border: 15px solid $main-color;
+	}
+}
+
+@mixin leftRectangle($sideOffset) {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: $sideOffset;
+	width: 250px;
+	height: 250px;
+	border: 20px solid $main-color;
+	border-radius: 5px;
+	z-index: 2;
+	@media (max-width: 1530px) {
+		width: 150px;
+		height: 150px;
+		border: 15px solid $main-color;
+	}
+}

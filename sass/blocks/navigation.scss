@@ -22,12 +22,19 @@
 			margin-left: 0;
 			position: relative;
 
+			@media (max-width: 992px) {
+				border-bottom: none;
+			}
+
 			&:last-child {
 				margin-right: 0;
 				margin-left: 120px;
 			}
 
 			.nav__item {
+				@media (max-width: 992px) {
+					display: none;
+				}
 				padding: 0;
 				border-bottom: none;
 				.nav__link {
@@ -36,7 +43,7 @@
 					color: inherit;
 					transition: color 0.2s ease-in;
 					&:hover {
-						color: #E8C300;
+						color: $main-color;
 					}
 				}
 			}
@@ -51,9 +58,19 @@ a.nav__logo {
 	left: 50%;
 	transform: translateX(-50%);
 	top: 35px;
+	@media (max-width: 992px) {
+		top: -80px;
+		left: -80px;
+		transform: none;
+	}
 	img {
 		width: 180px;
 		height: 180px;
+
+		@media (max-width: 992px) {
+			width: 180px;
+			height: 180px;
+		}
 	}
 
 }

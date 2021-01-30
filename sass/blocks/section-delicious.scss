@@ -3,7 +3,7 @@
 	text-align: center;
 
 	.section__text {
-		margin: 0 auto;
+		margin: 0 auto !important;
 	}
 }
 
@@ -21,6 +21,9 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	overflow: auto;
+	white-space: nowrap;
+	&::-webkit-scrollbar { width: 0; }
 }
 
 .delicious-menu__item {
@@ -37,7 +40,7 @@
 
 	&:hover,
 	&.active {
-		color: #E8C300;
+		color: $main-color;
 	}
 }
 
@@ -45,6 +48,10 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
+	@media (max-width: 828px) {
+		justify-content: center;
+	}
 }
 
 .delicious-content__item {
@@ -69,7 +76,7 @@
 		.delicious__title,
 		.delicious__description,
 		.delicious__price {
-			color: #E8C300;
+			color: $main-color;
 		}
 	}
 }

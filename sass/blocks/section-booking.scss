@@ -1,3 +1,10 @@
 .section-booking {
 	position: relative;
+	.container {
+		flex-wrap: wrap;
+	}
+
+	.section__image-wrapper {
+		display: none;
+	}
 }
