@@ -3,6 +3,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
+	overflow-x: hidden !important;
 
 	& .container {
 		justify-content: space-around;

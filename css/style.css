@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Banny";
-  src: url("../fonts/Banny-Round.ttf") format("truetype"); }
+  src: url("../fonts/Banny-Round.ttf") format("truetype");
+  font-display: swap; }
 
 /* Buttons */
 .button {
@@ -225,14 +226,10 @@
 font-family: 'Open Sans', sans-serif;
 font-family: "Banny";
 */
-html {
-  scroll-behavior: smooth; }
-
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  position: relative;
-  overflow-x: hidden; }
+  position: relative; }
 
 img {
   display: block;
@@ -979,7 +976,8 @@ a.nav__logo {
   background-image: url(../../img/specialties/specialties-bg.jpg);
   background-size: cover;
   background-attachment: fixed;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden !important; }
   .section-events .container {
     justify-content: space-around; }
     @media (max-width: 1530px) {

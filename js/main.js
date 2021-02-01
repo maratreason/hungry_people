@@ -24,9 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	select();
 	modalInit(modal, backdrop, modalTriggers, closeTrigger);
 	mobileMenu(mobileTrigger, mobileBody, backdrop);
+	removeAttribute();
 
 	AOS.init();
 });
+
+function removeAttribute() {
+	if (document.body.scrollWidth < 992) {
+		console.log(1);
+	}
+}
 
 function mobileMenu(mobileTrigger, mobileBody, backdrop) {
 	mobileTrigger.addEventListener("click", function() {
