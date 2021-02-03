@@ -3,6 +3,11 @@
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
+	height: 100%;
+	.container {
+		position: relative;
+	}
+
 	.section__image-wrapper {
 		transition: transform 0.2s ease-in;
 		&:after {
@@ -29,5 +34,28 @@
 
 	.section__text {
 		color: #fff;
+	}
+}
+
+.slider {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	.slide {
+		display: flex;
+		width: 100%;
+		height: 500px;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		top: 100px;
+		transition: transform 1s;
+		opacity: 0;
+
+		&.active {
+			opacity: 1;
+		}
 	}
 }

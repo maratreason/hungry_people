@@ -63,6 +63,8 @@ function modalInit(modal, backdrop, modalTriggers, closeTrigger) {
 	})
 }
 
+// Select script
+
 function select() {
 	const selectHeader = document.querySelectorAll(".select__header");
 	const selectItem = document.querySelectorAll(".select__item");
@@ -88,3 +90,83 @@ function chooseSelect() {
 	select.classList.remove("active");
 	selectIcon.classList.remove("showed");
 }
+
+// Slider script
+
+const slider = function() {
+	const slides = document.querySelectorAll(".slide");
+	const dotContainer = document.querySelector(".dots");
+
+	const maxSlide = slides.length;
+	let curSlide = 0;
+
+	const createDots = function() {
+		slides.forEach(function(_, i) {
+			const html = `<button class="dots__dot" data-slide="${i}"></button>`;
+			dotContainer.insertAdjacentHTML("beforeend", html);
+		});
+	};
+	createDots();
+
+	const activateDot = function(slide) {
+		document.querySelectorAll(".dots__dot").forEach(dot => dot.classList.remove("active"));
+		document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add("active");
+	};
+
+	activateDot(0);
+
+	const goToSlide = (slide) => {
+		slides.forEach((el, i) => {
+			el.style.transform = `translateX(${100 * (i - slide)}%)`;
+			el.classList.remove("active");
+		});
+		slides[slide].classList.add("active");
+	};
+
+	goToSlide(0);
+
+	const nextSlide = () => {
+		curSlide === (maxSlide - 1) ? curSlide = 0 : curSlide++;
+		goToSlide(curSlide);
+		activateDot(curSlide);
+	};
+
+	const prevSlide = () => {
+		curSlide === 0 ? curSlide = (maxSlide - 1) : curSlide--;
+		goToSlide(curSlide);
+		activateDot(curSlide);
+	};
+
+	document.addEventListener("keydown", function(e) {
+		if (e.key === "ArrowLeft") prevSlide();
+		e.key === "ArrowRight" && nextSlide();
+	});
+
+	dotContainer.addEventListener("click", function(e) {
+		if (e.target.classList.contains("dots__dot")) {
+			const slide = e.target.dataset.slide;
+			goToSlide(slide);
+			activateDot(slide);
+		}
+	});
+}
+
+slider();
+
+// Tab script
+const tabsContainer = document.querySelector(".delicious-menu__items");
+
+const tabs = document.querySelectorAll(".delicious-menu__item");
+const tabsContent = document.querySelectorAll(".delicious-content__items");
+
+tabsContainer.addEventListener("click", (e) => {
+	const clicked = e.target.closest(".delicious-menu__item");
+
+	if (!clicked) return;
+	console.log("clicked.dataset.tab", clicked.dataset.tab)
+	tabs.forEach(tab => tab.classList.remove("active"));
+	clicked.classList.add("active");
+
+	tabsContent.forEach(tabContent => tabContent.classList.remove("active"));
+	document.querySelector(`.delicious-content__items[data-tab-content="${clicked.dataset.tab}"]`).classList.add("active")
+});

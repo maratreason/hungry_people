@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/aos.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/animate.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="css/style.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" rel="stylesheet" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
 			rel="stylesheet"
@@ -151,7 +151,10 @@
 						</div>
 					</div>
 					<div class="header__shevron">
-						<a href="#about" class="shevron animate__animated animate__fadeInDown animate__infinite animate__slow">
+						<a
+							href="#about"
+							class="shevron animate__animated animate__fadeInDown animate__infinite animate__slow"
+						>
 							<img src="img/icons/shevron.svg" alt="shevron" />
 						</a>
 					</div>
@@ -344,36 +347,113 @@
 		<section class="section-specialties">
 			<div class="container">
 				<p class="top-text">Specialties</p>
-				<div
-					class="section__image-wrapper show-modal"
-					data-aos="fade-right"
-					data-aos-duration="1000"
-				>
-					<img
-						class="section__image"
-						src="img/specialties/Rectangle.jpg"
-						alt=""
-					/>
-				</div>
-				<div
-					class="section__text ml-auto"
-					data-aos="zoom-in"
-					data-aos-duration="1000"
-				>
-					<div class="section__title">chocolate pancakes</div>
-					<div class="section__subtitle">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Duis at velit maximus, molestie est a, tempor magna
+				<div class="slider">
+					<div class="slide active">
+						<div
+							class="section__image-wrapper show-modal"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+						>
+							<img
+								class="section__image"
+								src="img/specialties/Rectangle.jpg"
+								alt=""
+							/>
+						</div>
+						<div
+							class="section__text ml-auto"
+							data-aos="zoom-in"
+							data-aos-duration="1000"
+						>
+							<div class="section__title">chocolate pancakes</div>
+							<div class="section__subtitle">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Duis at velit maximus, molestie
+								est a, tempor magna
+							</div>
+							<div class="section__description">
+								Integer ullamcorper neque eu purus euismod, ac
+								faucibus mauris posuere. Morbi non ultrices
+								ligula. Sed dictum, enim sed ullamcorper
+								feugiat, dui odio vehicula eros, a sollicitudin
+								lorem quam nec sem. Mauris tincidunt feugiat
+								diam convallis pharetra. Nulla facilisis semper
+								laoreet.
+							</div>
+						</div>
 					</div>
-					<div class="section__description">
-						Integer ullamcorper neque eu purus euismod, ac faucibus
-						mauris posuere. Morbi non ultrices ligula. Sed dictum,
-						enim sed ullamcorper feugiat, dui odio vehicula eros, a
-						sollicitudin lorem quam nec sem. Mauris tincidunt
-						feugiat diam convallis pharetra. Nulla facilisis semper
-						laoreet.
+
+					<div class="slide">
+						<div
+							class="section__image-wrapper show-modal"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+						>
+							<img
+								class="section__image"
+								src="img/specialties/Rectangle.jpg"
+								alt=""
+							/>
+						</div>
+						<div
+							class="section__text ml-auto"
+							data-aos="zoom-in"
+							data-aos-duration="1000"
+						>
+							<div class="section__title">chocolate pancakes</div>
+							<div class="section__subtitle">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Duis at velit maximus, molestie
+								est a, tempor magna
+							</div>
+							<div class="section__description">
+								Integer ullamcorper neque eu purus euismod, ac
+								faucibus mauris posuere. Morbi non ultrices
+								ligula. Sed dictum, enim sed ullamcorper
+								feugiat, dui odio vehicula eros, a sollicitudin
+								lorem quam nec sem. Mauris tincidunt feugiat
+								diam convallis pharetra. Nulla facilisis semper
+								laoreet.
+							</div>
+						</div>
+					</div>
+
+					<div class="slide">
+						<div
+							class="section__image-wrapper show-modal"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+						>
+							<img
+								class="section__image"
+								src="img/specialties/Rectangle.jpg"
+								alt=""
+							/>
+						</div>
+						<div
+							class="section__text ml-auto"
+							data-aos="zoom-in"
+							data-aos-duration="1000"
+						>
+							<div class="section__title">chocolate pancakes</div>
+							<div class="section__subtitle">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Duis at velit maximus, molestie
+								est a, tempor magna
+							</div>
+							<div class="section__description">
+								Integer ullamcorper neque eu purus euismod, ac
+								faucibus mauris posuere. Morbi non ultrices
+								ligula. Sed dictum, enim sed ullamcorper
+								feugiat, dui odio vehicula eros, a sollicitudin
+								lorem quam nec sem. Mauris tincidunt feugiat
+								diam convallis pharetra. Nulla facilisis semper
+								laoreet.
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="dots"></div>
 			</div>
 		</section>
 
@@ -400,18 +480,18 @@
 				>
 					<div class="delicious-menu">
 						<ul class="delicious-menu__items">
-							<li class="delicious-menu__item active">Soupe</li>
-							<li class="delicious-menu__item">Pizza</li>
-							<li class="delicious-menu__item">Pasta</li>
-							<li class="delicious-menu__item">Desert</li>
-							<li class="delicious-menu__item">Wine</li>
-							<li class="delicious-menu__item">Beer</li>
-							<li class="delicious-menu__item">Drinks</li>
+							<li class="delicious-menu__item active" data-tab="0">Soupe</li>
+							<li class="delicious-menu__item" data-tab="1">Pizza</li>
+							<li class="delicious-menu__item" data-tab="2">Pasta</li>
+							<li class="delicious-menu__item" data-tab="3">Desert</li>
+							<li class="delicious-menu__item" data-tab="4">Wine</li>
+							<li class="delicious-menu__item" data-tab="5">Beer</li>
+							<li class="delicious-menu__item" data-tab="6">Drinks</li>
 						</ul>
 					</div>
 
 					<div class="delicious-content">
-						<div class="delicious-content__items">
+						<div class="delicious-content__items active" data-tab-content="0">
 							<div
 								class="delicious-content__item"
 								data-aos="zoom-in-up"
@@ -652,6 +732,115 @@
 								</div>
 								<div class="delicious__price">55,68 USD</div>
 							</div>
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
+								<div class="delicious__text">
+									<div class="delicious__title">
+										PIZZA QUATRO STAGIONI . . . .
+									</div>
+									<div class="delicious__description">
+										Integer ullamcorper neque eu purus
+										euismod
+									</div>
+								</div>
+								<div class="delicious__price">55,68 USD</div>
+							</div>
+						</div>
+
+						<div class="delicious-content__items" data-tab-content="1">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
+								<div class="delicious__text">
+									<div class="delicious__title">
+										PIZZA QUATRO STAGIONI . . . .
+									</div>
+									<div class="delicious__description">
+										Integer ullamcorper neque eu purus
+										euismod
+									</div>
+								</div>
+								<div class="delicious__price">55,68 USD</div>
+							</div>
+						</div>
+						<div class="delicious-content__items" data-tab-content="2">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
+								<div class="delicious__text">
+									<div class="delicious__title">
+										PIZZA QUATRO STAGIONI . . . .
+									</div>
+									<div class="delicious__description">
+										Integer ullamcorper neque eu purus
+										euismod
+									</div>
+								</div>
+								<div class="delicious__price">55,68 USD</div>
+							</div>
+						</div>
+						<div class="delicious-content__items" data-tab-content="3">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
+								<div class="delicious__text">
+									<div class="delicious__title">
+										PIZZA QUATRO STAGIONI . . . .
+									</div>
+									<div class="delicious__description">
+										Integer ullamcorper neque eu purus
+										euismod
+									</div>
+								</div>
+								<div class="delicious__price">55,68 USD</div>
+							</div>
+						</div>
+						<div class="delicious-content__items" data-tab-content="4">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
+								<div class="delicious__text">
+									<div class="delicious__title">
+										PIZZA QUATRO STAGIONI . . . .
+									</div>
+									<div class="delicious__description">
+										Integer ullamcorper neque eu purus
+										euismod
+									</div>
+								</div>
+								<div class="delicious__price">55,68 USD</div>
+							</div>
+						</div>
+						<div class="delicious-content__items" data-tab-content="5">
+							<div
+								class="delicious-content__item"
+								data-aos="zoom-in-up"
+								data-aos-duration="1000"
+							>
+								<div class="delicious__text">
+									<div class="delicious__title">
+										PIZZA QUATRO STAGIONI . . . .
+									</div>
+									<div class="delicious__description">
+										Integer ullamcorper neque eu purus
+										euismod
+									</div>
+								</div>
+								<div class="delicious__price">55,68 USD</div>
+							</div>
+						</div>
+						<div class="delicious-content__items" data-tab-content="6">
 							<div
 								class="delicious-content__item"
 								data-aos="zoom-in-up"
